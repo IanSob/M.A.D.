@@ -12,9 +12,8 @@ public class playerCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         maze = other.gameObject.transform.parent.gameObject;
-        if(maze.name == "Maze")
+        if(other.gameObject.name == "Walls")
         {
-            
             maze.GetComponent<mazeControl>().TouchHelp();
             maze.transform.position = Vector3.zero;
         }
