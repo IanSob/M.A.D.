@@ -21,11 +21,13 @@ public class mazeControl : MonoBehaviour
     {
         EnhancedTouchSupport.Enable();
         TouchSimulation.Enable();
+        helper = true;
     }
 
     private void OnDisable()
     {
         EnhancedTouchSupport.Disable();
+        maze.transform.position = Vector3.zero;
         TouchSimulation.Disable();
     }
 
@@ -79,5 +81,28 @@ public class mazeControl : MonoBehaviour
         }
         float currentAngle = Vector2.SignedAngle(startVec, touchOnePos - touchTwoPos);
         maze.transform.rotation = Quaternion.Euler(0, 0, mazeStartRotation.z + currentAngle); 
+    }
+
+    public void TouchHelp()
+    {
+        StartCoroutine(TouchFinder());
+    }
+
+    IEnumerator TouchFinder()
+    {
+        if(Touch.activeFingers.Count < 1)
+        {
+            helper = true;
+            StopCoroutine(TouchFinder());
+            Debug.Log("ran");
+            Debug.Log(Touch.activeFingers.Count);
+        }
+        else
+        {
+            Debug.Log("cor");
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(TouchFinder());
+        }
+        
     }
 }
