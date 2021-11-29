@@ -716,7 +716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2200549370344190757}
   - component: {fileID: 1387722656851296750}
-  - component: {fileID: 1387722656851296749}
+  - component: {fileID: 1001550956}
   m_Layer: 0
   m_Name: Maze
   m_TagString: Untagged
@@ -797,7 +797,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1387722656851296749
+--- !u!114 &1001550956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -806,14 +806,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2735065793175697468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38810b6f50c154432819cfd64fe59024, type: 3}
+  m_Script: {fileID: 11500000, guid: 29d28e5f67f7648afb3472c5deabc722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maze: {fileID: 2735065793175697468}
   maxClones: 10
   Spawnables:
-  - {fileID: 3270689637013194734, guid: 084f84e39e6a24c1ebf94b8b06396d2a, type: 3}
   - {fileID: 4933620620172430018, guid: b2235f4dacbab4bc2ad6cfe74e9d7846, type: 3}
+  - {fileID: 3270689637013194734, guid: 084f84e39e6a24c1ebf94b8b06396d2a, type: 3}
   - {fileID: 8773595289869912935, guid: 2bc2212b9078e4a7bb5b479c0e0aa70f, type: 3}
   - {fileID: 4529178901474966011, guid: 222582cae947d4412bcf1ee858fc5087, type: 3}
   - {fileID: 1869552351562818065, guid: ad7dea60adcb34eb18032c32c02afa14, type: 3}
